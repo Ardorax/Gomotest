@@ -45,9 +45,9 @@ def readMap(filePath: str) -> tuple[Stones, Stones, Stones]:
 def convertToBoard(player : Stones, oppoant : Stones) -> str:
     res = "BOARD\n"
     for stone in player:
-        res += f"{stone[0]} {stone[1]} 1\n"
+        res += f"{stone[0]},{stone[1]},1\n"
     for stone in oppoant:
-        res += f"{stone[0]} {stone[1]} 2\n"
+        res += f"{stone[0]},{stone[1]},2\n"
     return res + "DONE"
 
 def test(testMapPath: str, file: IOBase) -> bool:
